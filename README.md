@@ -1,39 +1,46 @@
-# 📊 Dashboard de Análise de Dados
+# 🕷 Web Scraper
 
-Aplicação desktop desenvolvida em Python que lê qualquer arquivo CSV e gera gráficos automaticamente, com detecção inteligente de tipos de dados.
+Aplicação desktop desenvolvida em Python que extrai dados de qualquer página da web, com interface gráfica e exportação para CSV.
 
 ## Funcionalidades
 
-- Leitura automática de qualquer arquivo CSV
-- Detecção inteligente de colunas numéricas e textuais
-- Cards de resumo com totais e médias das colunas numéricas
-- 4 tipos de gráfico: linha, barras, área e pizza
-- Seletores para escolher eixo X, eixo Y e comparação entre colunas
-- Botão para carregar diferentes arquivos CSV
-- Interface com tema escuro e design moderno
+- Extração de dados de qualquer URL
+- 6 modos de extração: títulos, links, imagens, tabelas, parágrafos e resumo geral
+- Cards com contadores dos dados encontrados
+- Resultados exibidos com formatação e cores
+- Exportação dos dados extraídos para CSV
+- Interface não trava durante o carregamento (uso de threading)
+- Tratamento de erros de conexão e timeout
 
 ## Tecnologias
 
 - **Python 3**
 - **Tkinter** (interface gráfica)
-- **Matplotlib** (gráficos)
+- **Requests** (requisições HTTP)
+- **BeautifulSoup4** (parsing HTML)
+- **Threading** (execução assíncrona)
 
 ## Como executar
 
-1. Instale a dependência:
+1. Instale as dependências:
 ```bash
-pip install matplotlib
+pip install requests beautifulsoup4
 ```
 2. Clone este repositório:
 ```bash
-git clone https://github.com/SEU-USUARIO/dashboard-analise-dados.git
+git clone https://github.com/SEU-USUARIO/web-scraper-python.git
 ```
 3. Execute o arquivo:
 ```bash
-python dashboard.py
+python scraper.py
 ```
 
-Um arquivo CSV de exemplo (`dados_vendas.csv`) está incluído no repositório.
+## Como usar
+
+1. Digite a URL do site que deseja analisar
+2. Escolha o tipo de extração no menu dropdown
+3. Clique em "Extrair Dados"
+4. Para salvar os dados, clique em "Exportar CSV"
 
 ## Captura de tela
 
